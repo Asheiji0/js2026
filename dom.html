@@ -8,17 +8,21 @@
 <body>
     <button id="digigigigido" onclick="elso()"></button>
     <button id="hehe" onclick="masodik()"></button>
-    <button></button>
+    <button id="hahaha" onclick="harmadik()"></button>
 
     <script>
         function elso(){
             document.getElementById("digigigigido").innerHTML="alpaka"
         }
+        let darab = 0;      
         function masodik(){
-            let darab =  ++
+            darab ++;
             document.getElementById("hehe").innerHTML = darab
         }
-        
+        function harmadik(){
+            setInterval(masodik, 1000);
+
+        }
     </script>
 </body>
 </html>
