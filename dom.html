@@ -15,12 +15,15 @@
             document.getElementById("digigigigido").innerHTML="alpaka"
         }
         let darab = 0;      
+        let szamlaloFut=false
         function masodik(){
             darab ++;
             document.getElementById("hehe").innerHTML = darab
         }
         function harmadik(){
-            setInterval(masodik, 1000);
+             if (szamlaloFut===false)
+                {szamlaloFut = setInterval(masodik, 1000);      
+                }
 
         }
     </script>
