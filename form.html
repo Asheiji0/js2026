@@ -11,6 +11,7 @@
     <input type="number" id="masodik"><br><br>
     <input type="number" id="harmadik"><br><br>
     <button type="button" onclick="szamolas()"><i>Számolás</button>
+        <div id="uzenet">Üzenet:</div>
 
     <script>
     
@@ -30,8 +31,19 @@
             console.log(coldal)
             coldal = parseInt(coldal)
             console.log(coldal)
-        }
 
+            if (aoldal + boldal > coldal
+            && aoldal + coldal > boldal
+            && boldal + coldal > aoldal)
+            {
+                console.log("Lehet háromszög")
+                document.getElementById("uzenet").innerHTML = "Lehet háromszög"
+            }
+           else {
+                console.log("Nem lehet háromszög")
+                 document.getElementById("uzenet").innerHTML = "nem lehet háromszög"
+            }
+        }
     </script>
 </body>
 </html>
