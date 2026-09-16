@@ -7,23 +7,31 @@
 </head>
 <body>
     <form action=""></form>
-    <input type="number" id="elso()">
-    <input type="number" id="masodik()">
-    <input type="number" id="harmadik()">
-    <button type="button" onclick=""></button>
+    <input type="number" id="elso"><br><br>
+    <input type="number" id="masodik"><br><br>
+    <input type="number" id="harmadik"><br><br>
+    <button type="button" onclick="szamolas()"><i>Számolás</button>
 
     <script>
-        function elso(){
+    
+        function szamolas(){
+            let aoldal = document.getElementById("elso").value
+            console.log(aoldal)
+            aoldal = parseInt(aoldal)
+            console.log(aoldal)
+            console.log("Ez itt egy szöveg")
 
+            let boldal = document.getElementById("masodik").value
+            console.log(boldal)
+            boldal = parseInt(boldal)
+            console.log(boldal)
+
+            let coldal = document.getElementById("harmadik").value
+            console.log(coldal)
+            coldal = parseInt(coldal)
+            console.log(coldal)
         }
 
-         function masodik(){
-            
-        }
-
-         function harmadik(){
-            
-        }
     </script>
 </body>
 </html>
