@@ -11,24 +11,24 @@
     <input type="number" id="masodik"><br><br>
     <input type="number" id="harmadik"><br><br>
     <button type="button" onclick="szamolas()"><i>Számolás</button>
-        <div id="uzenet">Üzenet:</div>
+        <div id="uzenet"></div>
 
     <script>
     
         function szamolas(){
             let aoldal = document.getElementById("elso").value
-            console.log(aoldal)
+            //console.log(aoldal)
             aoldal = parseInt(aoldal)
             console.log(aoldal)
             console.log("Ez itt egy szöveg")
 
             let boldal = document.getElementById("masodik").value
-            console.log(boldal)
+          //  console.log(boldal)
             boldal = parseInt(boldal)
             console.log(boldal)
 
             let coldal = document.getElementById("harmadik").value
-            console.log(coldal)
+            //console.log(coldal)
             coldal = parseInt(coldal)
             console.log(coldal)
 
@@ -43,6 +43,8 @@
                 console.log("Nem lehet háromszög")
                  document.getElementById("uzenet").innerHTML = "nem lehet háromszög"
             }
+            if(c > a&& c >b)
+            if(c* c == a *a + b*b)
         }
     </script>
 </body>
