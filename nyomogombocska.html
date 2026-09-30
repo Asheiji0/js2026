@@ -52,7 +52,7 @@
             </div>
 
             <div class="col-3 container px-5" id="">
-                <div class="row"><h2></h2>S</div>
+                <div class="row"><h2>DOM</h2></div>
             </div>
 
         </div>
@@ -144,9 +144,27 @@
         
           }
 
+          /*  let b=document.getElementById("bill2");
+            //console.log(b);
+
+            let szoveg=" "
+
+            for(let k=0;k<3;k++)
+            {
+                szoveg+=sorKeszit([k*3+1,k*3+2,k*3+3]);
+            }
+                szoveg+=sorKeszit(["",0,""]);
+
+            b.innerHTML+=szoveg;*/
+
+          for(let k=0;k<3;k++){
+            let sor = sorKeszitDOM([k*3+1,k*3+2,k*3+3]);
+            b.appendChild(sor);
+
+          }
+
           function cellaKeszit(szamok)
           {
-
             let cella = document.createElement("div");
             cella.className="col-4 text-center border py-3";
             cella.innerHTML = szamok;
@@ -154,16 +172,18 @@
           }
 
          function sorKeszitDOM(szamok){
-     //       let szoveg='<div class="row">';
+
               let sor = document.createElement("div");
             sor.className = "row";
+
             for(let i=0;i<3;i++)
             {
-        //         szoveg+='<div class="col-4 text-center border py-3">' + szamok[i] + '</div>';
+                    let cella = cellaKeszit(szamok[i]);
+                    sor.appendChild(cella);
             }
-            szoveg+="</div>";
+ 
 
-            return szoveg;
+            return sor;
         }
           
     </script>
