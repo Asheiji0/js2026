@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="lap1">elso</label>
+    <label for="lap2">madosik</label>
+        <input type="number" id="lap1">
+        <input type="number" id="lap2">
+        <button type="button" onclick="csinald()">gombocska</button>
+
+        <div id="szamok"></div>
+
+        <script>
+            function csinald(){
+
+                let sz1 = document.getElementById("lap1").value
+                let sz2 = document.getElementById("lap2").value
+                sz1=parseInt(sz1);
+                sz2=parseInt(sz2);
+                console.log(sz1,sz2)
+                let doboz = document.getElementById("szamok")
+                for (let i = sz1;i < sz2;i++){
+                    doboz.innerHTML += i+ " ";
+                }
+            }
+        </script>
+
+
+
+
+</body>
+</html>
