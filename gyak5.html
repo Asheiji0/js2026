@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+             #container {
+            width: 75x;
+            height: 50px;
+            background: rgb(0, 183, 255);
+            border: black;
+}
+
+    </style>
+</head>
+<body>
+        <input type="number" id="bekeres">
+
+        <button type="button" onclick="kek()">gomb</button>
+
+    <script>
+           function kek(){ 
+            let szam = document.getElementById("bekeres").value;
+            szam = parseInt(szam); 
+            console.log(szam);
+        
+            let kocka = document.getElementById("szamok");
+        
+            kocka.innerHTML = ""; 
+        
+
+            for (let i = 0; i < szam; i++) {
+          }
+
+
+    }
+
+    </script>
+
+    <!--szam bekerese es jelenitsuk meg egy 75x50 kek teglalapban aminek fekete kerete van a
+    nnyiszor jelenitsuk meg a szamot amennyi a szam egymas mellett document.creaztelementtel,ne ismetelje-->
+    <div id="container"></div>
+</body>
+</html>
