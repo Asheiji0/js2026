@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="bekeres1">elso</label>
+    <label for="bekeres2">madosik</label>
+        <input type="number" id="bekeres1">
+        <input type="number" id="bekeres2">
+        <button type="button" onclick="csinald()">gombocska</button>
+        
+        <div id="szamok"></div>
+
+        <script>
+            function csinald(){
+                let bekertszam1 = document.getElementById("bekeres1").value
+                let bekertszam2 = document.getElementById("bekeres2").value
+                console.log(bekertszam1,bekertszam2)
+                igen=parseInt(bekertszam1);
+                igenn=parseInt(bekertszam2);
+                console.log(bekertszam1,bekertszam2)
+
+
+                let osszeg = 0;
+                for (let i = bekertszam1;i <= bekertszam2;i++)
+                {
+                    osszeg += i + i
+                
+                }
+            
+            
+            
+            }
+        </script>
+            
+</body>
+</html>
+<!--ket input mezo es weboldalban megkell jeleniteni a 2 szam kozotto egesz szamok esszeget -->
