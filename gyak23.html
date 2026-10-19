@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <input type="number" id="bekeres">
+        <button type="button" onclick="gomb()">gomb</button>
+        
+        <div id="progi"></div>
+
+        <script>
+            function gomb(){
+                let sz = document.getElementById("bekeres").value;
+                sz = parseInt(sz)
+                console.log(sz)
+
+                for(let i=0; i<sz; i++)
+            {
+
+                console.log(i)
+
+                let doboz = document.getElementById("progi");
+                doboz.innerHTML += '<button type="button">gomb</button>'
+            }
+
+
+            }
+
+        </script>
+
+    <!--program keszites ami beker egy szamot input majd a szamm bekererse utan annyi gombot megjelnit a
+     weboldalban amennyi a szam voltt. a gomb felirata legyen az h gomb++a gomb lenyomasakor jelenjen meg a konzolba h o hanyadik gomb!-->
+</body>
+</html>
