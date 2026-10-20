@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="bekeres1"></label>
+    <label for="bekeres2"></label>
+        <input type="number" id="bekeres1">
+        <input type="number" id="bekeres2">
+        <button type="button" onclick="szamol()">Küld</button>
+
+        <div id="szamok"></div>
+
+     <script>
+        function szamol(){
+          let bekertszam1 = document.getElementById("bekeres1").value
+         let bekertszam2 = document.getElementById("bekeres2").value
+        szam1=parseInt(bekertszam1);
+        szam2=parseInt(bekertszam2);
+            
+        document.getElementById("osszead1").innerHTML = szam1;
+        document.getElementById("osszead2").innerHTML = szam2;
+        document.getElementById("osszeaderedmeny").innerHTML = szam1 + szam2;
+
+
+        document.getElementById("kivonas1").innerHTML = szam1;
+        document.getElementById("kivonas2").innerHTML = szam2;
+        document.getElementById("kivonaseredmeny").innerHTML = szam1 - szam2;
+
+        document.getElementById("szorzas1").innerHTML = szam1;
+        document.getElementById("szorzas2").innerHTML = szam2;
+        document.getElementById("szorzaseredmeny").innerHTML = szam1 * szam2;
+
+        document.getElementById("osztas1").innerHTML = szam1;
+        document.getElementById("osztas2").innerHTML = szam2;
+        document.getElementById("osztaseredmeny").innerHTML = szam1 / szam2;
+        }
+     </script>  
+
+
+        <table style="width: 65px">
+        <tr>
+            <td id="osszead1"></td>
+            <td>+</td>
+            <td id="osszead2"></td>
+            <td>=</td>
+            <td id="osszeaderedmeny"></td>
+        </tr>
+        <tr>
+           <td id="kivonas1"></td>
+            <td>-</td>
+            <td id="kivonas2"></td>
+            <td>=</td>
+            <td id="kivonaseredmeny"></td>
+        </tr>
+         <tr>
+           <td id="szorzas1"></td>
+            <td>*</td>
+            <td id="szorzas2"></td>
+            <td>=</td>
+            <td id="szorzaseredmeny"></td>
+        </tr>
+         <tr>
+           <td id="osztas1"></td>
+            <td>/</td>
+            <td id="osztas2"></td>
+            <td>=</td>
+            <td id="osztaseredmeny"></td>
+        </tr>
+        </table>
+     
+     <!-- kerjetek be 2 szamot tablazatot ala,amiben a tablan levo muveletek eredmenyeit irjuk bele-->
+</body>
+</html>
