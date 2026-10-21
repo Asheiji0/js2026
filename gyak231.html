@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input type="number" id="bekeres1">
+        <input type="number" id="bekeres2">
+        <button type="button" onclick="szamol()">gomb</button>
+        
+        <ul id="lista"></ul>
+
+        <script>
+
+            function szamol(){
+                let bekertszam1 = document.getElementById("bekeres1").value
+                let bekertszam2 = document.getElementById("bekeres2").value
+                console.log(bekertszam1,bekertszam2)
+                bekertszam1=parseInt(bekertszam1);
+                bekertszam2=parseInt(bekertszam2);
+                console.log(bekertszam1,bekertszam2)
+                let lista = document.getElementById("lista")
+
+                lista.innerHTML=" ";
+
+                for(let i =0; i <= bekertszam1*bekertszam2 ;i++)
+            {
+
+
+                lista.innerHTML+= "<li>" + i + "</li>"
+            }
+                
+            
+                
+
+            }
+        </script>
+
+    <!--2 szam bekerese listaba megjleneitve  a szamokat 0tol a 2 szam szorzataig!input,gomb,gomb megnyomasaval
+     megszerezni az erteket amit bevittek,ciklus ami megy 0 tol a 2 szam szorzataig,lista letrehozas (li),megszereznia
+       felsorolast ahgova a lista elemeket majd be kell szurni majd annak az inner htmlet boviteni meg egy sorral-->
+</body>
+</html>
