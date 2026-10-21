@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boglárka</title>
+</head>
+    <h1>Boglárka</h1>
+<body>
+    <h2>Első fladat.Kérj be 10 számot és jelenítsd meg az összegüket!</h2>
+    <input type="number" id="bekeres1">
+    <input type="number" id="bekeres2">
+    <input type="number" id="bekeres3">
+    <input type="number" id="bekeres4">
+    <input type="number" id="bekeres5">
+    <input type="number" id="bekeres6>
+    <input type="number" id="bekeres7">
+    <input type="number" id="bekeres8">
+    <input type="number" id="bekeres9">
+    <input type="number" id="bekeres10">
+
+        <button type="button" onclick="szamol()">Szamol</button>
+     
+        <script>
+        function szamol(){
+        let bekertszam1 = document.getElementById("bekeres1").value
+        let bekertszam2 = document.getElementById("bekeres2").value
+        let bekertszam3 = document.getElementById("bekeres3").value
+        let bekertszam4 = document.getElementById("bekeres4").value
+        let bekertszam5 = document.getElementById("bekeres5").value
+        let bekertszam6 = document.getElementById("bekeres6").value
+        let bekertszam7 = document.getElementById("bekeres7").value
+        let bekertszam8 = document.getElementById("bekeres8").value
+        let bekertszam9 = document.getElementById("bekeres9").value
+        let bekertszam10 = document.getElementById("bekeres10").value
+
+
+        szam1=parseInt(bekertszam1);
+        szam2=parseInt(bekertszam2);
+        szam3=parseInt(bekertszam3);
+        szam4=parseInt(bekertszam4);
+        szam5=parseInt(bekertszam5);
+        szam6=parseInt(bekertszam6);
+        szam7=parseInt(bekertszam7);
+        szam8=parseInt(bekertszam8);
+        szam9=parseInt(bekertszam9);
+        szam10=parseInt(bekertszam10);
+       
+            let eredmeny = bekertszam1 + bekertszam2 +bekertszam3 +bekertszam4 +bekertszam5
+             +bekertszam6 +bekertszam7 + bekertszam7 +bekertszam8 +bekertszam9 +bekertszam10;
+
+             document.getElementById("eredmeny").innerHTML = eredmeny;
+             console.log("eredmeny")
+        
+        }
+
+
+        </script>
+        <h2>Masodik.Kérj be 1 számot, és az 5 annyi pozitív többszorosét jelenítsd meg egy számozott listában!</h2>
+
+        <input type="number" id="masodikbekeres">
+
+        <button type="button" onclick="szamol()">Szamol</button>
+        <script>
+        function szamol(){}
+
+        let masodikbekeres= document.getElementById("masodikbekres").value
+        let lista = document.getElementById("lista")
+
+        lista.innerHTML = " ";
+
+        for(let i = masodikbekres; i <= masodikbekres;i++)
+
+       
+
+        </script>
+</body>
+</html>
