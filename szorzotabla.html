@@ -33,13 +33,16 @@
         fej.innerHTML = fejsor;
 
         let test = document.querySelector("table tbody");
+        for(let k =0;k<meret;k++){
         let sor = "<tr>";
 
             for(let i=0;i<meret;i++) {
-                sor += "<td>" +(i+1)+"</td>";
+                sor += "<td>" +(i+1)*(k+1)+"</td>";
             }
             sor += "</tr"
-            test.innerHTML = sor;
+            test.innerHTML += sor;
+
+        }
 
 
     </script>
