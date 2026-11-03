@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="random">A random szamod: </label>
+    <input type="number" id="random1"> <br><br>
+
+    <button type="button" onclick="szamolas()">katt</button>
+
+    <div id="megjelenitettSzam"></div>
+    <script>
+        function szamolas()
+       {
+            let random = parseInt(document.getElementById("random1").value);
+            console.log(random);
+
+            let megjelenitettSzam = document.getElementById("megjelenitettSzam");
+             if( random>0 ){
+             }
+            return
+            Math.floor(Math.random()*(9*10**(a-1)))+10**(a-1)
+            }
+  
+        }
+
+        </script>
+    <!-- oldal keszites amiben van egy fuggvenxy ami azt tudja h hany jegyu vletlen szamott generaljon ha megmondod neki. Ezek a szamjegyek legyenek 0-nal nagyobbak de 10nel
+    kisebbek.
+    ha nem jo szamot adunk meg akkor false ertekkel terjen vissza ehhez a fuggvenyhez keszitsunk egy urlapot ahol be lehet kerni hany jegyu veletlen szamot generaljunk es
+     ewzt jelenitsuk meg az urlap alatt. 
+     random1(0-9)
+     random2(10-99)
+     rnadom3(100-999)
+     rnqadom4(1000-999.999)
+     
+     
+            Math.floor(Math.random()*(9-0+1))+0;
+
+            Math.floor(Math.random()*(99-10+1))+10;
+
+            Math.floor(Math.random()*(999-100+1))+100;
+
+            Math.floor(Math.random()*(99999999-100000000+100000000))+1000000000;!-->
+     
+</body>
+</html>
