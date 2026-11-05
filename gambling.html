@@ -4,55 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        td,th{border: 1px solid black; text-align: center;} 
+    </style>
 </head>
 <body>
-<H1>LOTTOSZAMOK</H1>
-
-        <table>
+    <h1>Lottó számok</h1>
+    <table>
         <thead>
-            <tr>
-            <th>Hét szama:</th>
-            <th>Első szam:</th>
-            <th>Masodik szam</th>
-            <th>Haramdik szam</th>
-            <th>Negyedik szam</th>
-            <th>Otodik szam</th>
-            </tr>
+            <th>A hét száma</th>
+            <th>Első szám</th>
+            <th>Második szám</th>
+            <th>Harmadik szám</th>
+            <th>Negyedik szám</th>
+            <th>Ötödik szám</th>
         </thead>
-        <tbody>
+        <tbody id="tabla">
             <tr>
                 <th>1.</th>
-            <td>12</td>
-        </tr>
-        <tr>
-                <th>1.</th>
-            <td>12</td>
-        </tr>
-        <tr>
-                <th>1.</th>
-            <td>12</td>
-        </tr>
-        <tr>
-                <th>1.</th>
-            <td>12</td>
-        </tr>
-        <tr>
-                <th>1.</th>
-            <td>12</td>
-        </tr>
-        <tr>
-                <th>1.</th>
-            <td>12</td>
-        </tr>
-        <tr>
+                <td>12</td>
+                <td>5</td>
+                <td>8</td>
+                <td>61</td>
 
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
+    
         <script>
 
-        function lotto(){
+        function szam(){
 
-            const randomSzam = Math.floor(Math.random() * (9 - 1 + 1)) + 1;
+         return  Math.floor(Math.random()* 90)+1;
+        }
 
+        for(let i=1;i<=52;i++){
+            let sor = "  <tr><th>"+i+".</th><td>"+szam()+"</td><td>"+szam()+"</td><td>"+szam()+"</td><td>"+szam()+"</td><td>"+szam()+"</td></tr>"
+            document.getElementById("tabla").innerHTML+=sor;
 
         }
     </script>
