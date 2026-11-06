@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <label for="szam"></label>
+     <input type="number" id="szam">
+        <button type="button" onclick="urlap()">gomb</button>
+        <div id="uzi"></div>
+    <script>
+
+        function urlap(){
+             let bekeres = parseInt(document.getElementById("szam").value)
+                const szamok = [];
+
+                if(bekeres<0 || bekeres > 100)
+                    {
+                        document.getElementById("uzi").innerHTML="Hibás szám";
+                        return;
+                }
+                for(let i= 0;i<bekeres;i++)
+                szamok.push (Math.floor(Math.random() *100)+1);
+            console.log(szamok)
+
+            let szoveg = "<ul>";
+                for(let i=0;i<szamok.length;i++)
+            {
+                szoveg += "<li>"+ szamok[i]+ "</li>"
+            }
+
+            szoveg+= "</ul>";
+            document.getElementById("uzi").innerHTML=szoveg;
+
+
+        }
+    </script>
+    <!--keszitsetek egy egy szam bekresere szolo urlapot, a bekres utan vizsgaljatok meg hogy 0 és 100 kozotti e a szam
+    ha nem, akkor egy helyen jelenjen meg a nem megfelelo szam hiba uzenet
+    ha jó, akkor keszitsetek annyi veltlen szamot egy tombbe majd a tombbol egy listat es ezt jelenitsuk meg a hiba uzenet helyen-->
+</body>
+</html>
