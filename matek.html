@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <label for="oldal1"></label>
+    <label for="oldal2"></label>
+        <label for="oldal3"></label>
+        <input type="number" id="oldal1">
+        <input type="number" id="oldal2">
+        <input type="number" id="oldal3">
+        <button type="button" onclick="csinald()">Szamol</button>
+
+        <div id="szamok"></div>
+
+        <script>
+            function csinald(){
+                let sz1 = document.getElementById("oldal1").value
+                let sz2 = document.getElementById("oldal2").value
+                let sz3 = document.getElementById("oldal3").value   
+                sz1=parseInt(sz1);
+                sz2=parseInt(sz2);
+                sz3=parseInt(sz3);
+
+                console.log(sz1,sz2,sz3)
+                
+
+                const szamok = [];
+                if(sz1+sz2<sz3 || sz1+sz3<sz2 || sz2+sz3<sz1)
+            {
+                document.getElementById("szamok").innerHTML = "Lehet haromszög"
+            }
+            else
+            {
+                document.getElementById("szamok").innerHTML = "nem lehet haromszög"
+            }
+
+
+            console.log (Math.max(sz1,sz2,sz3));
+
+            let derekszogu = false;
+            let haromszog = false;
+
+            if(Math.max(sz1,sz2,sz3 )=== sz1){
+
+            derekszogu = sz1**2==sz2**2,sz3**2;
+            document.getElementById("derekszog").innerHTML = "lehet derekszogu haromszog";
+            }
+
+            elseif(Math.max(sz1,sz2,sz3) === sz2){
+
+           derekszogu = sz2**2==sz1**2,sz3**2;
+            document.getElementById("derekszog").innerHTML = "lehet derekszogu haromszog";
+
+            }
+            else(){
+
+            }
+
+            }
+
+    </script>
+       <!--keszitsetek egy olyan weboldalt ami 3 bekert oldal hosszbol eldonti h lehet e haromszog illetve lehet e derekszogu haromszog,
+            a bekert adatokat mentsetek el egy tombbe, a ahrom adatot egyszerre
+            -->
+</body>
+</html>
