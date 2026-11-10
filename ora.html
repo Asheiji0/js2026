@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="ido()">Kattintgatás itt!</button>
+
+    <div id="uzenet"></div>
+
+    <script>
+        const idok = [];
+        function ido()
+        {
+            console.log("gfsegfg")
+
+            const d = new Date();
+            document.getElementById("uzenet").innerHTML = d;
+
+            console.log(d.getHours(), d.getSeconds());
+
+           // document.getElementById("uzenet").innerHTML = d.getHours() + " óra " + d.getMinutes() + " perc " + d.getSeconds() + " másodperc ";
+
+            idok.push(d.getHours() + ";" + d.getMinutes() + ";" + d.getSeconds() + ";")
+            document.getElementById("uzenet").innerHTML = idok;
+            console.log(idok)
+
+            
+        }
+    </script>
+</body>
+</html>
+
+<!-- kattintas kozotti idok merese. Legkevesebb ki irasa -->
+
+<!-- 10 25 42 -->
