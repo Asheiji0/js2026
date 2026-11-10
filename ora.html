@@ -9,6 +9,8 @@
     <button type="button" onclick="ido()">Kattintgatás itt!</button>
 
     <div id="uzenet"></div>
+      <div id="pontosido"></div>
+    <div id="ora"></div>
 
     <script>
         const idok = [];
@@ -21,12 +23,23 @@
 
             console.log(d.getHours(), d.getSeconds());
 
-           // document.getElementById("uzenet").innerHTML = d.getHours() + " óra " + d.getMinutes() + " perc " + d.getSeconds() + " másodperc ";
+            document.getElementById("uzenet").innerHTML = d.getHours() + " óra " + d.getMinutes() + " perc " + d.getSeconds() + " másodperc ";
 
             idok.push(d.getHours() + ";" + d.getMinutes() + ";" + d.getSeconds() + ";")
             document.getElementById("uzenet").innerHTML = idok;
             console.log(idok)
+             
+            function pontosido (){
+                const d = new Date();
 
+                return
+                idok.push(d.getHours() + ";" + d.getMinutes() + ";" + d.getSeconds() + ";")
+            }
+
+            function ora(){
+                document.getElementById("ora").innerHTML = pontosido();
+            }
+            setInterval(ora, 1000)
             
         }
     </script>
