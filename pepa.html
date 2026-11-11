@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <button type="button" onclick="ido()">Kattintgatás itt!</button>
+
+        <div id="ora"></div>
+
+        <ul id="lista"></ul>
+
+    <script>
+
+        const idok = [];
+
+        let utolsoIdo = 0;
+
+        function ido(){
+
+        console.log("gfsegfg")
+
+        const d = new Date();
+        let time = d.getTime();
+        document.getElementById("ora").innerHTML = time;
+
+            if(utolsoIdo !== 0)
+            {idok.push (d.getTime() - utolsoIdo)}
+            //idok.push (d.getTime());
+            console.log(idok);
+
+            let lista =document.getElementById("lista");
+            lista.innerHTML = " ";
+
+
+            for(let i=0;i < idok.length;i++ )
+            {
+
+           document.getElementById(("lista")).innerHTML = "<li>" + idok[i] + "</li>" + document.getElementById("lista").innerHTML
+            }
+
+            utolsoIdo = d.getTime();
+
+           // a = a + "szó"
+
+            
+
+        }
+
+       </script>
+
+
+
+
+
+
+    <!--keszitsetek egy programot ami gomb nyomasra megjeleniti a time stampet (az aktualis ido idobejeleget)
+    gyujtsetek ossze egy tombben ezt a time stampet
+    jelenitsetek meg egy listaban az osszes timestampet 
+    a legrisebb ertek legyen fellul
+    ne a timestamp hanema ze elozohoz kepest a time stampek kulonbsege legyen megjelenitve-->
+</body>
+</html>
