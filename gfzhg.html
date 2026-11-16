@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td,th{border: 1px solid black; text-align: center;} 
+    </style>
+</head>
+<body>
+    <h1>Lottó számok</h1>
+    <table>
+        <thead>
+            <th>A hét száma</th>
+            <th>Első szám</th>
+            <th>Második szám</th>
+            <th>Harmadik szám</th>
+            <th>Negyedik szám</th>
+            <th>Ötödik szám</th>
+            <th>Hatodik szám</th>
+        </thead>
+        <tbody id="tabla">
+            <tr>
+                <th>1.</th>
+                <td>12</td>
+                <td>5</td>
+                <td>8</td>
+                <td>61</td>
+                <td>61</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
+    
+        <script>
+
+        function szam(){
+
+         return  Math.floor(Math.random()* 45)+1;
+        }
+
+        for(let i=1;i<=52;i++){
+            let sor = "  <tr><th>"+i+".</th><td>"+szam()+"</td><td>"+szam()+"</td><td>"+szam()+"</td><td>"+szam()+"</td><td>"+szam()+"</td></tr></td><td>"+szam()+""
+            document.getElementById("tabla").innerHTML+=sor;
+
+        }
+    </script>
+    <!--keszitsunk egy olyan weboldalt amiben tablazatban megjeleneik egy ev osszes 5-os lotto szama (legyenek veletlen szeruek,)
+    52 het egy evben,elso oszlopban a hetek szamai,5-os lotto 1 es 90 kozott van tehat 
+    veletlen szamokat 1 es 90 között kell genrealni öt darabot tablazatba
+    
+    
+    hozzatok letre egy ures html oldalt,legyen benne egy h1es cim h lottoszamok
+    legyen egy tabalzat uresen
+    kell a table tag a thead a theaden bellul a cellak(th-k amiben a 7 szama van aztan olyan szoveggel h elso szam blah blah blah)
+    aztan tbody elso oszlopaban egy th ez tartalmazza a het szamat amit ki lehet szamolni a ciklus valtozobol
+    masodik cella:td ez egy veletlen szam 1 es 90 között, a masodik is ugyan ez oz ötödik cellaig
+    tbodyra hivatkozni kell idvel
+    script:
+    keszitsetek egy fuggvenyt emi veltlen szamot csinal 1 es 90 kozott
+    nem fuggvenyben csak a csriptben egy ciklus ami 52x lefut 
+    annak belsejebe bekle kell szurni egy sort a tbodyba
+    a masodik cella tdben egy fuggveny altal visszadott veletlen szam szerepeljen otszor erre is egy ciklzust kell majd csinalni,
+    egy valtozoba osszegyujteni ezeket a dolgokat majd csak utanan belerakni a tbody-ba
+    -->
+</body>
+</html>
