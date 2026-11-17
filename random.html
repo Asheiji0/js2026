@@ -34,10 +34,10 @@
         }
         console.log(random2);
 
-        for(let i=0; i<=random2.length; i++)
+        for(let i=0; i<random2.length; i++)
         {
             console.log(random2[i]);
-            let tabla = "<tr><td>" + random() + "</td></tr>"
+            let tabla = "<tr><td>" + random2[i] + "</td></tr>"
             document.getElementById("szamok").innerHTML += tabla;
         }
 
@@ -71,8 +71,13 @@
         }
 
 
-        let atlag = 0;
-        for
+        let osszeg = 0;
+        for (let i = 0;i < random2.length ;i++)
+        {
+            osszeg += random2[i] /random2.length;
+            document.getElementById("span3").innerHTML = " " +osszeg;
+        }
+
 
 
     </script>
