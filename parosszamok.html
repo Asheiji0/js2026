@@ -31,7 +31,14 @@
         <h2>héttel osztható:</h2>
     </table>
 
+    <table style="border: 1px solid black; border-collapse: collapse;" id="tabla5">
+        <h2>rendezett:</h2>
+    </table>
 
+
+     <table style="border: 1px solid black; border-collapse: collapse;" id="tabla6">
+        <h2>rendezetlen:</h2>
+    </table>
 
     <script>
 
@@ -155,6 +162,33 @@
             document.getElementById("tabla4").innerHTML += tablazat4;
         }
 
+       // random2.sort((a,b)=> b-a);
+        //console.log(random2); ezt modositja a tombot
+       let rendezett = random2.toSorted((a,b)=> a-b);
+        console.log(rendezett);
+
+
+         for(let i=0; i<rendezett.length; i++)
+        {
+            console.log(rendezett[i]);
+            let tablazatocska = "<tr><td>" + rendezett[i] + "</td></tr>"
+            document.getElementById("tabla5").innerHTML += tablazatocska;
+        }
+
+        
+        let rendezetlen= random2.toSorted((a,b)=> b-a);
+        console.log(rendezetlen);
+
+
+         for(let i=0; i<rendezetlen.length; i++)
+        {
+            console.log(rendezetlen[i]);
+            let tablazatocska2 = "<tr><td>" + rendezetlen[i] + "</td></tr>"
+            document.getElementById("tabla6").innerHTML += tablazatocska2;
+        }
+
+
+        
     </script>
     
 </body>
@@ -167,4 +201,5 @@
  -atlag 
  
  a paros szamokat valugassuk ki
- tablazatban meggjelenitjuk a paros szamokt-->
+ tablazatban meggjelenitjuk a paros szamokt 
+ tomb rendezese  - sort fuggvennyel-->
