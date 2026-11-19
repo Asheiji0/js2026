@@ -14,6 +14,7 @@
     <div>Legkisebb szám:<span id="span2"></span></div>
     <div>Átlag:<span id="span3"></span></div>
     <div>Páros:<span id="span4"></span></div>
+    <div>Van e benne 42:<span id="van"></span></div>
     <br><br>
     <table style="border: 1px solid black; border-collapse: collapse;" id="szamok">
         <h2>random</h2>
@@ -188,6 +189,36 @@
         }
 
 
+  
+
+        
+    let feltetelIgaz = false;  //naluk  vanbenne
+    for(let i=0; i<random2.length; i++)
+        {
+
+            if(random2[i] === 42)
+            {
+                feltetelIgaz = true;
+                break;
+                
+            }
+
+            if (feltetelIgaz === true)
+
+            {
+                console.log("van benne")
+                document.getElementById("van").innerHTML = "van benne"
+
+            }
+
+            else(feltetelIgaz = false)
+            {
+                console.log ("nincs benne")
+                document.getElementById("van").innerHTML = "nincs benne"
+
+            }
+        }
+
         
     </script>
     
@@ -202,4 +233,9 @@
  
  a paros szamokat valugassuk ki
  tablazatban meggjelenitjuk a paros szamokt 
- tomb rendezese  - sort fuggvennyel-->
+ tomb rendezese  - sort fuggvennyel
+ 
+ 
+ elem megkeresese - feltetelnek megfelelo elem megkeresese ű6igen van benne/nem nics benne/hol van benne
+ 
+ feltetel:42 - bent van e es ha igen hanyadik helyen-->
