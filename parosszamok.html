@@ -7,7 +7,7 @@
     <title>asassa</title>
 </head>
 <body>
-
+<label for="bekeres"></label>
     <input type="number" id="bekeres">
 
     <button type="button" onclick="bekereskuld()">gomb</button>
@@ -19,7 +19,8 @@
     <div>Átlag:<span id="span3"></span></div>
     <div>Páros:<span id="span4"></span></div>
     <div>Van e benne 42:<span id="van"></span></div>
-    <div>Van e benne bekert szam:<span id="bekert"></span></div>
+    <div>Van e benne bekert szam:<span id="keresettIndex2"></span></div>
+    <div><span id="keresettIndex3"></span></div>
 
     
     <div><span id="helye"></span></div>
@@ -248,43 +249,53 @@
 
 
 
-        function bekereskuld(){
-            let bekeres = document.getElementById("bekeres").value;
-            bekeres = parseInt(bekeres)
+function bekereskuld()
+{
+    let bekeres = parseInt(document.getElementById("bekeres").value);
+    let feltetelIgaz = false;  //naluk  vanbenne
+    for(let i=0; i<random2.length; i++){
 
-             for(let i=0; i<random2.length; i++)
-        {
-
-            if(random2[i] === bekeres)
-            {
-                feltetelIgaz = true;
-                break;
-                
-            }
-
+     if(random2[i] === bekeres)
+        
             if (feltetelIgaz === true)
+            
 
             {
                 console.log("van benne")
-                document.getElementById("bekert").innerHTML = "van benne"
+                document.getElementById("keresettIndex2").innerHTML = "van benne"
 
 
             }
 
             else(feltetelIgaz = false)
+
             {
                 console.log ("nincs benne")
-                document.getElementById("bekert").innerHTML = "nincs benne"
+                document.getElementById("keresettIndex2").innerHTML = "nincs benne"
 
             }
+
+        
+
+            
+            // console.log(sz1)
+            let keresettIndex3 = -1;
+            for(let i=0;i<random2.length;i++)
+            {
+                if(random2[i] === bekeres)
+                {
+                    keresettIndex3 = i;
+                    break;
+                }
+            }
+            document.getElementById("keresettIndex3").innerHTML = "A felhasználó által keresett elem a " + keresettIndex3 + ". helyen áll.";
+
+        }
+            
+       
         }
 
 
-
-
-
-
-        }
 
 
     </script>
@@ -308,4 +319,11 @@
  feltetel:42 - bent van e es ha igen hanyadik helyen(tomb indexxel)
  beviteli mezot ahol bekerjuk a szamot amit keresunk 
  
+
+
+ szamokat ker be urlap 
+ szamokat egy tombbe eltarolva(az osszes)
+ az urlap alatt jelenjen meg a legnagyobb,legkisebb elem,darabszam,atlag
+ alatti pedig az osszes szam tablazatban a bekeres sorrendjeben
+ torolje az input mezo tartalmat
  -->
